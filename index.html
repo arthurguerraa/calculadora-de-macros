@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>MyFitness</title>
+
+<style>
+body {
+  font-family: Arial;
+  background: #111;
+  color: #fff;
+  padding: 20px;
+}
+
+input, select, button {
+  padding: 8px;
+  margin: 5px;
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 20px;
+}
+
+th, td {
+  border: 1px solid #555;
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: #222;
+}
+
+button {
+  cursor: pointer;
+  background: #0a84ff;
+  border: none;
+}
+
+button:hover {
+  background: #006be0;
+}
+
+#totais, #banco {
+  margin-top: 20px;
+  background: #1a1a1a;
+  padding: 15px;
+  border-radius: 8px;
+}
+</style>
+</head>
+
+<body>
+
+<h1>MyFitness</h1>
+
+<div id="banco">
+  <h2>Banco de alimentos</h2>
+  <button id="exportar">Exportar alimentos</button>
+  <input type="file" id="importar" accept=".json">
+</div>
+
+<h2>Consumo do dia</h2>
+<button id="addLinha">Adicionar alimento</button>
+
+<table>
+  <thead>
+    <tr>
+      <th>Alimento</th>
+      <th>Quantidade (g)</th>
+      <th>Carbo</th>
+      <th>Proteína</th>
+      <th>Gordura</th>
+      <th>Remover</th>
+    </tr>
+  </thead>
+  <tbody id="tabela"></tbody>
+</table>
+
+<div id="totais">
+  <h3>Totais do dia</h3>
+  <p>Carboidratos: <span id="totalCarb">0</span> g</p>
+  <p>Proteína: <span id="totalProt">0</span> g</p>
+  <p>Gordura: <span id="totalGord">0</span> g</p>
+  <p>Calorias: <span id="totalCal">0</span> kcal</p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
